@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+h1{
+  font-family: 'Bungee Inline', cursive;
+  color: white;
+  font-weight: 400;
+  font-size: min(10vw, 80px);
+  margin: 15px 0 15px 0;
+}
