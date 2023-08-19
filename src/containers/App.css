@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
-h1:not(.loading-text){
+h1{
   font-family: 'Bungee Inline', cursive;
   color: white;
   font-weight: 400;
@@ -8,9 +8,9 @@ h1:not(.loading-text){
   margin: 15px 0 15px 0;
 }
 
-.loading-text{
+/* .loading-text{
   color: white;
   font-weight: 700;
   font-size: min(10vw, 80px);
   margin: 15px 0 15px 0;
-}
+} */
