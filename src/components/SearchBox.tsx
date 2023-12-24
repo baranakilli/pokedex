@@ -1,4 +1,10 @@
-const SearchBox = ({searchChange}) => {
+import { ChangeEvent } from "react";
+
+type SearchBoxProps = {
+  searchChange: (event: ChangeEvent<HTMLInputElement>) => void
+};
+
+const SearchBox = ({searchChange}: SearchBoxProps) => {
    return (
       <div className="pa2 mb3">
          <input 

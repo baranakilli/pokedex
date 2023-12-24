@@ -5,11 +5,17 @@ import {
   REQUEST_ROBOTS_FAILED,
 } from './constants';
 
+type Action = {
+  type: string;
+  payload?: any;
+}
+
+
 const initialStateSearch = {
   searchField: '',
 };
 
-export const searchRobots = (state = initialStateSearch, action = {}) => {
+export const searchRobots = (state = initialStateSearch, action: Action) => {
   switch (action.type) {
     case CHANGE_SEARCH_FIELD:
       return Object.assign({}, state, { searchField: action.payload });
@@ -21,10 +27,10 @@ export const searchRobots = (state = initialStateSearch, action = {}) => {
 const initialStateRobots = {
   isPending: false,
   robots: [],
-  errot: '',
+  error: '',
 };
 
-export const requestRobotsReducer = (state = initialStateRobots, action = {}) => {
+export const requestRobotsReducer = (state = initialStateRobots, action: Action) => {
   switch (action.type) {
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, { isPending: true });
