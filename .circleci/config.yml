@@ -26,7 +26,7 @@ jobs:
       - run: echo "Hellllloooo!!! "
 workflows:
   version: 2.1 
-  bobby_sally:
+  build_test_and_linting:
     jobs:
       - build
       - hithere
