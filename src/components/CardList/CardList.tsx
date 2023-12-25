@@ -10,11 +10,12 @@ const CardList = ({ robots }: CardListProps) => {
       <div>
          {robots.map((robot) => {
             return (
-               <Card 
-                  id={robot.id}
-                  name={robot.name} 
-                  email={robot.email}
-               />
+              <Card
+                key={robot.id}
+                id={robot.id}
+                name={robot.name}
+                email={robot.email}
+              />
             );
          })}
       </div>
