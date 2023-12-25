@@ -47,7 +47,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -72,7 +73,13 @@
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
+    "husky": "^8.0.3",
     "jest-fetch-mock": "^3.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.1.1",
     "redux-mock-store": "^1.5.4"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
