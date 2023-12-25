@@ -47,7 +47,7 @@ exports[`renders without crashing 1`] = `
   <CounterButton />
   <Scroll>
     <ErrorBoundry>
-      <Cardlist
+      <CardList
         robots={Array []}
       />
     </ErrorBoundry>
