@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render CardList component 1`] = `
+<Fragment>
+  <Card
+    key="0"
+    name="John Snow"
+  />
+</Fragment>
+`;

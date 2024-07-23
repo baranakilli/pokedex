@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Card component 1`] = `
+<div
+  className="bg-washed-yellow  br3 ma2 ba bw2 b--red shadow-5 inline-flex flex-column items-center"
+>
+  <img
+    alt="pokemon undefined"
+    className="pv3"
+    height="200px"
+    src=""
+    width="200px"
+  />
+  <div
+    style={
+      Object {
+        "width": "250px",
+      }
+    }
+  >
+    <h2
+      className="pokemon-title ttc white ma0 pb3 bg-red h-100"
+    />
+    <div
+      className="line"
+    >
+      <div
+        className="circle"
+      >
+        <div
+          className="inner-circle"
+        />
+      </div>
+    </div>
+    <p
+      className="black pb2 pt3 fw6 mt0 mb2 bg-white"
+    >
+      Weight: 
+      <br />
+      Height: 
+    </p>
+  </div>
+</div>
+`;

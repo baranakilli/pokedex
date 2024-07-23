@@ -51,23 +51,19 @@ describe("requestPokemonsReducer reducer", () => {
     expect(
       reducers.requestPokemonsReducer(initialStatePokemons, {
         type: types.REQUEST_POKEMONS_SUCCESS,
-        payload: [
-          {
-            id: 123,
-            name: "Peter",
-            email: "peter.spidey@gmail.com",
-          },
-        ],
+        payload: {"results": [
+        {
+            "name": "bulbasaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/1/"
+        }]}
       })
     ).toEqual({
       isPending: false,
       pokemons: [
         {
-          id: 123,
-          name: "Peter",
-          email: "peter.spidey@gmail.com",
-        },
-      ],
+            "name": "bulbasaur",
+            "url": "https://pokeapi.co/api/v2/pokemon/1/"
+        }],
       error: "",
     });
   });
