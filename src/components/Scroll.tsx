@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface ScrollProps {
   children: ReactNode;
@@ -7,11 +7,10 @@ interface ScrollProps {
 const Scroll = (props: ScrollProps) => {
   return (
     <div
-      className="pt3"
+      className="pt3 pb5"
       style={{
-        overflowY: 'scroll',
-        borderTop: '2px solid lightgray',
-        height: '770px',
+        overflowY: "scroll",
+        height: "75vh",
       }}
     >
       {props.children}

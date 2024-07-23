@@ -1,85 +1,87 @@
-import * as reducers from './reducers';
-import * as types from './constants';
+import * as reducers from "./reducers";
+import * as types from "./constants";
 
 const initialStateSearch = {
-  searchField: '',
+  searchField: "",
 };
 
-describe('searchRobots reducer', () => {
-  it('should return the initial state', () => {
-    expect(reducers.searchRobots(undefined, {})).toEqual({ searchField: '' });
+describe("searchPokemons reducer", () => {
+  it("should return the initial state", () => {
+    expect(reducers.searchPokemons(undefined, {})).toEqual({ searchField: "" });
   });
 
-  it('should handle CHANGE_SEARCH_FIELD', () => {
+  it("should handle CHANGE_SEARCH_FIELD", () => {
     expect(
-      reducers.searchRobots(initialStateSearch, {
+      reducers.searchPokemons(initialStateSearch, {
         type: types.CHANGE_SEARCH_FIELD,
-        payload: 'abc',
+        payload: "abc",
       })
-    ).toEqual({ searchField: 'abc' });
+    ).toEqual({ searchField: "abc" });
   });
 });
 
-const initialStateRobots = {
+const initialStatePokemons = {
   isPending: false,
-  robots: [],
-  error: '',
+  pokemons: [],
+  error: "",
 };
 
-describe('requestRobotsReducer reducer', () => {
-  it('should return the initial state', () => {
-    expect(reducers.requestRobotsReducer(undefined, {})).toEqual({
+describe("requestPokemonsReducer reducer", () => {
+  it("should return the initial state", () => {
+    expect(reducers.requestPokemonsReducer(undefined, {})).toEqual({
       isPending: false,
-      robots: [],
-      error: '',
+      pokemons: [],
+      error: "",
     });
   });
 
-  it('should handle REQUEST_ROBOTS_PENDING action', () => {
+  it("should handle REQUEST_POKEMONS_PENDING action", () => {
     expect(
-      reducers.requestRobotsReducer(initialStateRobots, {
-        type: types.REQUEST_ROBOTS_PENDING,
+      reducers.requestPokemonsReducer(initialStatePokemons, {
+        type: types.REQUEST_POKEMONS_PENDING,
       })
     ).toEqual({
       isPending: true,
-      robots: [],
-      error: '',
+      pokemons: [],
+      error: "",
     });
   });
 
-  it('should handle REQUEST_ROBOTS_SUCCESS action', () => {
+  it("should handle REQUEST_POKEMONS_SUCCESS action", () => {
     expect(
-      reducers.requestRobotsReducer(initialStateRobots, {
-        type: types.REQUEST_ROBOTS_SUCCESS,
-        payload: [{
-          id: 123,
-          name: 'Peter',
-          email: 'peter.spidey@gmail.com',
-        }],
+      reducers.requestPokemonsReducer(initialStatePokemons, {
+        type: types.REQUEST_POKEMONS_SUCCESS,
+        payload: [
+          {
+            id: 123,
+            name: "Peter",
+            email: "peter.spidey@gmail.com",
+          },
+        ],
       })
     ).toEqual({
       isPending: false,
-      robots: [
+      pokemons: [
         {
           id: 123,
-          name: 'Peter',
-          email: 'peter.spidey@gmail.com',
+          name: "Peter",
+          email: "peter.spidey@gmail.com",
         },
       ],
-      error: '',
+      error: "",
     });
   });
 
-  it('should handle REQUEST_ROBOTS_FAILED action', () => {
+  it("should handle REQUEST_POKEMONS_FAILED action", () => {
     expect(
-      reducers.requestRobotsReducer(initialStateRobots, {
-        type: types.REQUEST_ROBOTS_FAILED,
-        payload: 'IMPOOOSSIBLEEE!!',
+      reducers.requestPokemonsReducer(initialStatePokemons, {
+        type: types.REQUEST_POKEMONS_FAILED,
+        payload: "IMPOOOSSIBLEEE!!",
       })
     ).toEqual({
       isPending: false,
-      robots: [],
-      error: 'IMPOOOSSIBLEEE!!',
+      pokemons: [],
+      error: "IMPOOOSSIBLEEE!!",
     });
   });
 });

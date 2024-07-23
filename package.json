@@ -1,6 +1,6 @@
 {
-  "name": "robofriends",
-  "homepage": "https://baranakilli.github.io/robofriends",
+  "name": "pokédex",
+  "homepage": "https://baranakilli.github.io/pokédex",
   "version": "0.1.0",
   "private": true,
   "jest": {

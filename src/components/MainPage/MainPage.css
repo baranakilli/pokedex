@@ -1,9 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+#header {
+  width: 350px;
+  margin-top: 20px;
+}
 
-h1{
-  font-family: 'Bungee Inline', cursive;
-  color: white;
-  font-weight: 400;
-  font-size: min(10vw, 80px);
-  margin: 15px 0 15px 0;
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 100%;
+  background-color: black;
+  border-top: solid #ff4136 0.5rem;
+  border-bottom: solid white 0.5rem;
+}
+
+.line > .circle {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: white;
+  border: solid black 0.5rem;
+}
+
+.line > .circle > .inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1/1;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: white;
+  border: solid black 0.08rem;
+}
+.pokemon-title {
+  padding-top: 1.1rem;
+  border-radius: 15% 15% 0 0;
 }

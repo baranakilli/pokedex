@@ -1,21 +1,20 @@
 import {
   CHANGE_SEARCH_FIELD,
-  REQUEST_ROBOTS_PENDING,
-  REQUEST_ROBOTS_SUCCESS,
-  REQUEST_ROBOTS_FAILED,
-} from './constants';
+  REQUEST_POKEMONS_PENDING,
+  REQUEST_POKEMONS_SUCCESS,
+  REQUEST_POKEMONS_FAILED,
+} from "./constants";
 
 type Action = {
   type: string;
   payload?: any;
-}
-
-
-const initialStateSearch = {
-  searchField: '',
 };
 
-export const searchRobots = (state = initialStateSearch, action: Action) => {
+const initialStateSearch = {
+  searchField: "",
+};
+
+export const searchPokemons = (state = initialStateSearch, action: Action) => {
   switch (action.type) {
     case CHANGE_SEARCH_FIELD:
       return Object.assign({}, state, { searchField: action.payload });
@@ -24,21 +23,30 @@ export const searchRobots = (state = initialStateSearch, action: Action) => {
   }
 };
 
-const initialStateRobots = {
+const initialStatePokemons = {
   isPending: false,
-  robots: [],
-  error: '',
+  pokemons: [],
+  error: "",
 };
 
-export const requestRobotsReducer = (state = initialStateRobots, action: Action) => {
+export const requestPokemonsReducer = (
+  state = initialStatePokemons,
+  action: Action
+) => {
   switch (action.type) {
-    case REQUEST_ROBOTS_PENDING:
+    case REQUEST_POKEMONS_PENDING:
       return Object.assign({}, state, { isPending: true });
-    case REQUEST_ROBOTS_SUCCESS:
-      return Object.assign({}, state, { robots: action.payload, isPending: false });
-    case REQUEST_ROBOTS_FAILED:
-      return Object.assign({}, state, { error: action.payload, isPending: false });
+    case REQUEST_POKEMONS_SUCCESS:
+      return Object.assign({}, state, {
+        pokemons: action.payload.results,
+        isPending: false,
+      });
+    case REQUEST_POKEMONS_FAILED:
+      return Object.assign({}, state, {
+        error: action.payload,
+        isPending: false,
+      });
     default:
       return state;
   }
-}
+};

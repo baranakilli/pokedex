@@ -1,32 +1,31 @@
-import { ChangeEvent, Component } from 'react';
-import Header from '../Header';
-import SearchBox from '../SearchBox';
-import CounterButton from '../CounterButton/CounterButton';
-import Scroll from '../Scroll';
-import ErrorBoundry from '../ErrorBoundry';
-import CardList from '../CardList/CardList';
-import './MainPage.css';
+import { ChangeEvent, Component } from "react";
+import Header from "../Header";
+import SearchBox from "../SearchBox";
+import Scroll from "../Scroll";
+import ErrorBoundry from "../ErrorBoundry";
+import CardList from "../CardList/CardList";
+import "./MainPage.css";
 
-import { Robot } from '../../actions';
+import { Pokemon } from "../../actions";
 
 interface MainPageProps {
-  onRequestRobots: () => void;
+  onRequestPokemons: () => void;
   onSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  robots: Robot[];
+  pokemons: Pokemon[];
   searchField: string;
   isPending: boolean;
   error?: string | Error;
 }
 
 class MainPage extends Component<MainPageProps> {
-  
   componentDidMount() {
-    this.props.onRequestRobots();
+    this.props.onRequestPokemons();
   }
-  filterRobots = () => {
-    const { robots, searchField } = this.props;
-    return robots.filter((robot) => {
-      return robot.name.toLowerCase().includes(searchField.toLowerCase());
+
+  filterPokemons = () => {
+    const { pokemons, searchField } = this.props;
+    return pokemons.filter((pokemon) => {
+      return pokemon.name.toLowerCase().includes(searchField.toLowerCase());
     });
   };
 
@@ -37,7 +36,6 @@ class MainPage extends Component<MainPageProps> {
       <div className="tc">
         <Header />
         <SearchBox searchChange={onSearchChange} />
-        <CounterButton />
         <Scroll>
           <ErrorBoundry>
             {isPending ? (
@@ -45,7 +43,7 @@ class MainPage extends Component<MainPageProps> {
             ) : error ? (
               <h1 className="tc dark-red">ERROR</h1>
             ) : (
-              <CardList robots={this.filterRobots()} />
+              <CardList pokemons={this.filterPokemons()} />
             )}
           </ErrorBoundry>
         </Scroll>

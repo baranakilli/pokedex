@@ -1,95 +1,95 @@
-import { shallow } from 'enzyme';
-import MainPage from './MainPage';
+import { shallow } from "enzyme";
+import MainPage from "./MainPage";
 
 let wrapper;
 
 beforeEach(() => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
-    searchField: '',
+    onRequestPokemons: jest.fn(),
+    pokemons: [],
+    searchField: "",
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
 });
 
-it('renders without crashing', () => {
+it("renders without crashing", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('filters Robots', () => {
+it("filters Pokemons", () => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
-    searchField: 'a',
+    onRequestPokemons: jest.fn(),
+    pokemons: [],
+    searchField: "a",
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual([]);
+  expect(wrapper.instance().filterPokemons()).toEqual([]);
 });
 
-it('filters Robots correctly', () => {
-  const filteredRobots = [
+it("filters Pokemons correctly", () => {
+  const filteredPokemons = [
     {
       id: 1,
-      name: 'Leanne Graham',
-      username: 'Bret',
-      email: 'Sincere@april.biz',
+      name: "Leanne Graham",
+      username: "Bret",
+      email: "Sincere@april.biz",
     },
   ];
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [
+    onRequestPokemons: jest.fn(),
+    pokemons: [
       {
         id: 1,
-        name: 'Leanne Graham',
-        username: 'Bret',
-        email: 'Sincere@april.biz',
+        name: "Leanne Graham",
+        username: "Bret",
+        email: "Sincere@april.biz",
       },
     ],
-    searchField: 'Leanne',
+    searchField: "Leanne",
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual(filteredRobots);
+  expect(wrapper.instance().filterPokemons()).toEqual(filteredPokemons);
 });
 
-it('filters Robots correctly 2', () => {
+it("filters Pokemons correctly 2", () => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [
+    onRequestPokemons: jest.fn(),
+    pokemons: [
       {
         id: 1,
-        name: 'Leanne Graham',
-        username: 'Bret',
-        email: 'Sincere@april.biz',
+        name: "Leanne Graham",
+        username: "Bret",
+        email: "Sincere@april.biz",
       },
     ],
-    searchField: 'Xavier',
+    searchField: "Xavier",
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual([]);
+  expect(wrapper.instance().filterPokemons()).toEqual([]);
 });
 
-it('isPending working', () => {
+it("isPending working", () => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
-    searchField: 'a',
+    onRequestPokemons: jest.fn(),
+    pokemons: [],
+    searchField: "a",
     isPending: true,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
   expect(wrapper).toMatchSnapshot();
 });
 
-it('error display working', () => {
+it("error display working", () => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
-    searchField: 'a',
+    onRequestPokemons: jest.fn(),
+    pokemons: [],
+    searchField: "a",
     isPending: false,
-    error: true
+    error: true,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
   expect(wrapper).toMatchSnapshot();

@@ -1,25 +1,18 @@
 import Card from "../Card/Card";
-import { Robot } from "../../actions";
+import { Pokemon } from "../../actions";
 
 type CardListProps = {
-   robots: Robot[];
-}
+  pokemons: Pokemon[];
+};
 
-const CardList = ({ robots }: CardListProps) => {
-   return (
-      <div>
-         {robots.map((robot) => {
-            return (
-              <Card
-                key={robot.id}
-                id={robot.id}
-                name={robot.name}
-                email={robot.email}
-              />
-            );
-         })}
-      </div>
-   )
-}
+const CardList = ({ pokemons }: CardListProps) => {
+  return (
+    <>
+      {pokemons.map((pokemon, index) => {
+        return <Card key={index} name={pokemon.name} url={pokemon.url} />;
+      })}
+    </>
+  );
+};
 
-export default CardList
+export default CardList;

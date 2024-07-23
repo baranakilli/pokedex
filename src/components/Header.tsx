@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 class Header extends Component {
   shouldComponentUpdate(nextProps: any, nextState: any) {
@@ -6,7 +6,14 @@ class Header extends Component {
   }
 
   render() {
-    return <h1>RoboFriends</h1>;
+    return (
+      <div
+        className="flex items-center justify-center"
+        style={{ height: "15vh", minHeight: "120px" }}
+      >
+        <img id="header" src={require("../images/Pokédex_logo.png")} alt="" />
+      </div>
+    );
   }
 }
 export default Header;
