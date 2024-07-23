@@ -39,7 +39,7 @@ class MainPage extends Component<MainPageProps> {
         <Scroll>
           <ErrorBoundry>
             {isPending ? (
-              <h1 className="tc f1">LOADING..</h1>
+              <h1 className="tc white f1">Loading..</h1>
             ) : error ? (
               <h1 className="tc dark-red">ERROR</h1>
             ) : (

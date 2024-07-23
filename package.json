@@ -1,6 +1,6 @@
 {
   "name": "pokédex",
-  "homepage": "https://baranakilli.github.io/pokédex",
+  "homepage": "https://baranakilli.github.io/pokedex",
   "version": "0.1.0",
   "private": true,
   "jest": {
