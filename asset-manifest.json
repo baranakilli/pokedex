@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/robofriends/static/css/main.c1959446.css",
-    "main.js": "/robofriends/static/js/main.3cc56465.js",
-    "static/js/787.c2cff050.chunk.js": "/robofriends/static/js/787.c2cff050.chunk.js",
-    "service-worker.js": "/robofriends/service-worker.js",
-    "index.html": "/robofriends/index.html",
-    "main.c1959446.css.map": "/robofriends/static/css/main.c1959446.css.map",
-    "main.3cc56465.js.map": "/robofriends/static/js/main.3cc56465.js.map",
-    "787.c2cff050.chunk.js.map": "/robofriends/static/js/787.c2cff050.chunk.js.map"
+    "main.css": "/pok%C3%A9dex/static/css/main.8bf57ce9.css",
+    "main.js": "/pok%C3%A9dex/static/js/main.4ae71391.js",
+    "static/js/787.277a8d42.chunk.js": "/pok%C3%A9dex/static/js/787.277a8d42.chunk.js",
+    "static/media/Pokédex_logo.png": "/pok%C3%A9dex/static/media/Pokédex_logo.907dcf3a592a0e37e0dd.png",
+    "service-worker.js": "/pok%C3%A9dex/service-worker.js",
+    "index.html": "/pok%C3%A9dex/index.html",
+    "main.8bf57ce9.css.map": "/pok%C3%A9dex/static/css/main.8bf57ce9.css.map",
+    "main.4ae71391.js.map": "/pok%C3%A9dex/static/js/main.4ae71391.js.map",
+    "787.277a8d42.chunk.js.map": "/pok%C3%A9dex/static/js/787.277a8d42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1959446.css",
-    "static/js/main.3cc56465.js"
+    "static/css/main.8bf57ce9.css",
+    "static/js/main.4ae71391.js"
   ]
 }
