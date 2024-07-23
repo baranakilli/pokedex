@@ -19,7 +19,7 @@ export const setSearchField = (text: string) => ({
 
 export const requestPokemons = () => (dispatch: any) => {
   dispatch({ type: REQUEST_POKEMONS_PENDING });
-  return getData<Pokemon[]>("https://pokeapi.co/api/v2/pokemon/?limit=60")
+  return getData<Pokemon[]>("https://pokeapi.co/api/v2/pokemon/?limit=42")
     .then((data) => dispatch({ type: REQUEST_POKEMONS_SUCCESS, payload: data }))
     .catch((error) =>
       dispatch({ type: REQUEST_POKEMONS_FAILED, payload: error })
