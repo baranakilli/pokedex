@@ -27,9 +27,9 @@ exports[`isPending working 1`] = `
   <Scroll>
     <ErrorBoundry>
       <h1
-        className="tc f1"
+        className="tc white f1"
       >
-        LOADING..
+        Loading..
       </h1>
     </ErrorBoundry>
   </Scroll>
