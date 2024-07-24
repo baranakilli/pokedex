@@ -44,9 +44,9 @@ const Card = (props: Pokemon) => {
           </div>
         </div>
         <p className="black pb2 pt3 fw6 mt0 mb2 bg-white">
-          Weight: {pokemon?.weight}
+          Weight: {pokemon?.weight}kg
           <br />
-          Height: {pokemon?.height}
+          Height: {pokemon?.height}0 cm
         </p>
       </div>
     </div>
