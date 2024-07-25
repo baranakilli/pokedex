@@ -36,8 +36,10 @@ exports[`expect to render Card component 1`] = `
       className="black pb2 pt3 fw6 mt0 mb2 bg-white"
     >
       Weight: 
+      kg
       <br />
       Height: 
+      0 cm
     </p>
   </div>
 </div>
